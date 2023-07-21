@@ -1,86 +1,47 @@
-# Check your Balance
+# DANG - A Crypto Token Built on the Internet Computer Blockchain
 
-1. Find out your principal id:
+## Overview
 
-```
-dfx identity get-principal
-```
+Welcome to the DANG Crypto Token project! This decentralized application (DApp) is built on the Internet Computer (ICP) blockchain, leveraging the Motoko programming language for writing smart contracts, and a React-based frontend for a smooth user experience. The project aims to provide users with the ability to interact with the DANG cryptocurrency by allowing them to claim free tokens, check token balances, transfer tokens to others securely on the Internet Computer blockchain, and use Internet Identity for anonymous blockchain authentication.
 
-2. Save it somewhere.
+## Token
 
-My principal id is: zcrij-pp2ha-wewpm-qzaux-cnuji-4sx2m-k6mc7-goxam-ggt73-5lduo-qae
+The DANG cryptocurrency is a native token on the Internet Computer (ICP) blockchain. It serves as the utility and governance token for the DANG Crypto Token project. Users can interact with the DANG token by claiming free tokens upon authentication, checking their token balance, and transferring tokens to other users.
 
+The total supply of DANG tokens is fixed at 1 billion, and new tokens cannot be minted. The smart contract governing the DANG token ensures transparency, security, and decentralized token transactions on the Internet Computer blockchain.
 
-3. Format and store it in a command line variable:
-```
-OWNER_PUBLIC_KEY="principal \"$( \dfx identity get-principal )\""
-```
+## Features
 
-4. Check that step 3 worked by printing it out:
-```
-echo $OWNER_PUBLIC_KEY
-```
+### Curve Finance Clone
 
-5. Check the owner's balance:
-```
-dfx canister call token balanceOf "( $OWNER_PUBLIC_KEY )"
-```
+To enhance the user experience, this project incorporates a clone of Curve Finance called DSurv made using the React.js framework. Users can easily swap tokens and provide liquidity for the DANG token, thereby participating in decentralized trading and earning rewards.
 
-# Charge the Canister
+### Internet Identity
 
+To use DSurv, users need to authenticate themselves through Internet Identity, which is quite similar to Google, Facebook, or any other authentication method. However, Internet Identity is an anonymous blockchain authentication framework supported by the ICP blockchain. It enables users to authenticate securely without revealing their real identity.
 
-1. Check canister ID:
-```
-dfx canister id token
-```
+### Claim Free Tokens
 
-2. Save canister ID into a command line variable:
-```
-CANISTER_PUBLIC_KEY="principal \"$( \dfx canister id token )\""
-```
+New users can claim free DANG tokens by authenticating through Internet Identity. After successful authentication, they can claim 10,000 DANG tokens to start their crypto journey. Free tokens can only be claimed once for new users as these tokens are directly transferred from the total supply of the tokens.
 
-3. Check canister ID has been successfully saved:
-```
-echo $CANISTER_PUBLIC_KEY
-```
+### Check Token Balance
 
-4. Transfer half a billion tokens to the canister Principal ID:
-```
-dfx canister call token transfer "($CANISTER_PUBLIC_KEY, 500_000_000)"
+Users can check their DANG token balance to keep track of their holdings. The frontend interface will display the user's current token balance fetched directly from the smart contract on the Internet Computer blockchain.
 
-```
+### Transfer Tokens
 
-# Deploy the Project to the Live IC Network
+DANG token holders can transfer their tokens to other users. By providing the recipient's Principle user Id and the number of tokens to transfer, users can easily initiate secure and decentralized transactions on the Internet Computer blockchain.
 
-1. Create and deploy canisters:
+## Contributing
 
-```
-dfx deploy --network ic
-```
+Welcome any contributions from the community to make the DANG Crypto Token project even better. If you want to contribute to the project, please raise a pull request.
 
-2. Check the live canister ID:
-```
-dfx canister --network ic id token
-```
+## Bug Reporting
 
-3. Save the live canister ID to a command line variable:
-```
-LIVE_CANISTER_KEY="principal \"$( \dfx canister --network ic id token )\""
-```
+If you encounter any bugs or issues while using the DANG Crypto Token DApp, please open a new issue on our GitHub repository. Be sure to provide as much detail as possible, including steps to reproduce the problem, the expected behavior, and the actual behavior observed.
 
-4. Check that it worked:
-```
-echo $LIVE_CANISTER_KEY
-```
+## Contact
 
-5. Transfer some tokens to the live canister:
-```
-dfx canister --network ic call token transfer "($LIVE_CANISTER_KEY, 50_000_000)"
-```
+For any inquiries or questions related to the DANG Crypto Token project, please reach out at rajanchauhan88888@gmail.com.
 
-6. Get live canister front-end id:
-```
-dfx canister --network ic id token_assets
-```
-7. Copy the id from step 6 and add .raw.ic0.app to the end to form a URL.
-e.g. zdv65-7qaaa-aaaai-qibdq-cai.raw.ic0.app
+Thank you for your interest in the DANG Crypto Token project. Happy decentralized token trading!
