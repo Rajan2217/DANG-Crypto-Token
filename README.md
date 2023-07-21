@@ -1,4 +1,4 @@
-# DANG - A Crypto Token Built on the Internet Computer Blockchain
+# DANG - A Crypto Token Built on the ICP Blockchain
 
 ## Overview
 
