@@ -14,7 +14,7 @@ The total supply of DANG tokens is fixed at 1 billion, and new tokens cannot be 
 
 ### Curve Finance Clone
 
-To enhance the user experience, this project incorporates a clone of Curve Finance called DSurv made using the React.js framework. Users can easily swap tokens and provide liquidity for the DANG token, thereby participating in decentralized trading and earning rewards.
+To optimize the user experience, DANG integrates a customized clone of Curve Finance called DSurv, developed with the versatility of React.js. DSurv empowers users to seamlessly swap tokens and participate in secure decentralized transactions.
 
 ### Internet Identity
 
